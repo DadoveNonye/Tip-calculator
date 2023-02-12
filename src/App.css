@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
+.app {
+  display: grid;
+  grid-template-columns: 45% 45%;
+  gap: 30px;
+  padding: 10px;
+}
+.leftsplit {
+  padding: 20px;
+}
+.percentageBtn {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 9px;
+  width: 100%;
+}
+.percentageBtn * {
+  border-radius: 4px;
+  color: hsl(0, 0%, 100%);
+}
+input {
+  background-color: hsl(189, 41%, 97%);
+  border: none;
+  padding: 10px;
+  width: 100%;
+}
+.cusInput {
+  color: black;
+  border: 2px solid none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
+  background-color: hsl(183, 100%, 15%);
+  cursor: pointer;
+  border: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.rightslpit {
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 5px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.rightslpit div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.rightslpit > div > h1 {
+  color: hsl(185, 41%, 84%);
+}
+.rightslpit p {
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.btn {
+  background-color: hsl(184, 14%, 56%);
+  color: hsl(183, 100%, 15%);
+  margin-top: auto;
+  padding: 15px;
+  border-radius: 5px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 550px) {
+  .app {
+    display: flex;
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  .percentageBtn {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
